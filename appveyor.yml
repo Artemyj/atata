@@ -19,7 +19,7 @@ configuration: Release
 
 build:
   parallel: true                  # enable MSBuild parallel builds
-  project: Atata.sln              # path to Visual Studio solution or project
+  project: c:\projects\myproject\src\Atata.sln              # path to Visual Studio solution or project
 
 
 
