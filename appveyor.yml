@@ -18,7 +18,7 @@ platform: Any CPU
 configuration: Release
 
 before_build:
-  - nuget restore
+  - nuget restore c:\projects\myproject\src\Atata.sln      
 
 build:
   parallel: true                  # enable MSBuild parallel builds
