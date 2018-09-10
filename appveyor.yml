@@ -26,7 +26,7 @@ build:
   verbosity: quiet
 
 after_build:
-  ps: >./LaunchAtataSite.ps1
+  ps: ./LaunchAtataSite.ps1
      
 
 
