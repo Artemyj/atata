@@ -28,9 +28,9 @@ build:
 after_build:
   ps: >-
       $siteFolderPath = "c:\projects\myproject\src\Atata.TestApp"
-      $port = 57612
+      $port = 50549
       $servedAt = "http://localhost:$($port)/"
-      write-host "jVUNDemo location: $siteFolderPath"
+      write-host "Atata demo location: $siteFolderPath"
       write-host "Spin up Atata site at $($servedAt)"
       $process = Start-Process 'C:\Program Files (x86)\IIS Express\iisexpress.exe' -NoNewWindow -ArgumentList "/path:$($siteFolderPath) /port:$($port)"
       write-host "Wait a moment for IIS to startup"
