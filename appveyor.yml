@@ -12,8 +12,6 @@ shallow_clone: true
 matrix:
   fast_finish: true     # set this flag to immediately finish build once one of the jobs fails.
 
-
-
 platform: Any CPU
 configuration: Release
 
@@ -24,26 +22,14 @@ build:
   parallel: true                  # enable MSBuild parallel builds
   project: c:\projects\myproject\src\Atata.sln              # path to Visual Studio solution or project
 
-
-
-
-
 artifacts:
 
   # pushing a single file
   - path: bin
 
 
-
-#---------------------------------#
-#     deployment configuration    #
-#---------------------------------#
-
-# providers: Local, FTP, WebDeploy, AzureCS, AzureBlob, S3, NuGet, Environment
-# provider names are case-sensitive!
 deploy:
 
-    
     # Deploy to GitHub Releases
   - provider: GitHub
     artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
@@ -53,7 +39,6 @@ deploy:
       branch: master                # release from master branch only
       appveyor_repo_tag: true       # deploy on tag push only
 
-  
 notifications:
 
   # Email
