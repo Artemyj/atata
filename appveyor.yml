@@ -14,6 +14,8 @@ matrix:
 
 platform: Any CPU
 configuration: Release
+services:
+  - iis                 # start IIS
 
 before_build:
   - nuget restore c:\projects\myproject\src\Atata.sln      
@@ -21,6 +23,10 @@ before_build:
 build:
   parallel: true                  # enable MSBuild parallel builds
   project: c:\projects\myproject\src\Atata.sln              # path to Visual Studio solution or project
+  verbosity: quiet
+
+after_build:
+  ps: c:\projects\myproject\src\LaunchAtataSite.ps1
 
 artifacts:
 
